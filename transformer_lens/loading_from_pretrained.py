@@ -1290,7 +1290,7 @@ def convert_hf_model_config(model_name: str, **kwargs):
             "n_key_value_heads": hf_config.num_key_value_heads,
             "d_mlp": hf_config.intermediate_size,
             "n_layers": hf_config.num_hidden_layers,
-            "n_ctx": 2048,  # Capped bc the actual ctx length is 30k and the attn mask would be too big
+            "n_ctx": 4096,  # Capped bc the actual ctx length is 30k and the attn mask would be too big
             "eps": hf_config.rms_norm_eps,
             "d_vocab": hf_config.vocab_size,
             "act_fn": hf_config.hidden_act,
